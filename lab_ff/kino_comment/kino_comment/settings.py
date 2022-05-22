@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'comments',
-    'django.contrib.contenttypes'  # Django контент-типовая система (даёт разрешения, связанные с моделями).
+    'django.contrib.contenttypes',  # Django контент-типовая система (даёт разрешения, связанные с моделями).
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,6 @@
 body {
     background: #222629;
+
 }
 
 aside{
@@ -68,3 +69,4 @@ main .things{
     display: flex;
     flex-direction: column;
 }
+

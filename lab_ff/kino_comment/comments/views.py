@@ -9,3 +9,6 @@ def movie(request):
 
 def cartoon(request):
     return render(request, 'comments/cartoon.html')
+
+def outlog(request):
+    return render(request, 'registration/outlog.html')

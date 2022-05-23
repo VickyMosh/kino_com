@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2715b489-6734-4e2b-9acf-c3a392a8f8cd" name="Changes" comment="" />
+    <list default="true" id="2715b489-6734-4e2b-9acf-c3a392a8f8cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/dolmatines_full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/pirates_full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/wishes_full.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/accounts/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/accounts/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/static/comments/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/static/comments/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/base_generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/base_generic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/cartoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/cartoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/registration/outlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/registration/outlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/db.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,14 +44,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/balas/Desktop/уник/веб/kino_com&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,5 +60,16 @@
       <updated>1652885107359</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

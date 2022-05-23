@@ -7,7 +7,23 @@
 
 {% block content %}
 <div class="features">
-    <h1>Привет! Ты на странице с фильмами.</h1>
-    <p>Текст текст текст текст текст текст текст текст текст</p>
+    <h1>Hi! You're on the page with popular Disney movies!</h1>
+    <p>Here are 3 movies. Get acquainted with them and give your feedback!</p>
+    <div class="things">
+        <div class="first">
+            <a href="{% url 'pirates_full' %}"> <img src="static/comments/img/pirates.webp" width="134" height="226"></a>
+            <p style="color:  #86c232">Пираты Карибского моря: Проклятие Черной жемчужины.</p>
+            <p>Жизнь харизматичного авантюриста, капитана Джека Воробья, полная увлекательных приключений, резко меняется, когда его заклятый враг капитан Барбосса похищает корабль Джека Черную Жемчужину...</p>
+        </div>
+        <div class="second">
+            <a href="{% url 'dolmatines_full' %}"> <img src="static/comments/img/dolmatins.webp" width="134" height="226"></a>
+            <p style="color: #86c232">101 Долматинец.</p>
+            <p>Эта забавная история произошла в Англии на Рождество... Злодейка Круэлла Дэ Вил решает украсть ровно 101 далматинца, чтобы пополнить коллекцию своих меховых изделий. Однако она еще не представляет, что ее ждет, ведь хозяева и родители маленьких пятнистых щенков не будут сидеть сложа руки...</p>
+        </div>
+        <div class="third">
+            <a href="{% url 'wishes_full' %}"> <img src="static/comments/img/wishes.webp" width="134" height="226"></a>
+            <p style="color: #86c232">16 Желаний.</p>
+            <p>Эбби Дженсен планировала свое 16-летие с того момента как она была маленькой девочкой. Когда наступает этот день, она добавляет последнее (16-ое) желание в свой список желаний...</p>
+    </div>
 </div>
 {% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base_generic.html' %}
+
+
+{% block title %}
+Фильмы
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Ты на странице с фильмом 101 Долматинец!</h1>
+    <p>Информация о фильме.</p>
+    <div class="things_full">
+        <div class="first">
+            <h3 style="color: #86c232">Описание:</h3>
+            <p>Эта забавная история произошла в Англии на Рождество... Злодейка Круэлла Дэ Вил решает украсть ровно 101 далматинца, чтобы пополнить коллекцию своих меховых изделий. Однако она еще не представляет, что ее ждет, ведь хозяева и родители маленьких пятнистых щенков не будут сидеть сложа руки...</p>
+        </div>
+        <br>
+        <div class="second">
+            <h3 style="color: #86c232">Год производства и страна:</h3>
+            <p>1996, Великобританияб США</p>
+        </div>
+        <br>
+        <div class="third">
+            <h3 style="color: #86c232">Жанр</h3>
+            <p>семейный, комедия, криминал, приключения</p>
+        </div>
+        <br>
+        <div class="fourth">
+            <h3 style="color: #86c232">Режиссер</h3>
+            <p>Стивен Херек</p>
+        </div>
+        <br>
+        <div class="fifth">
+            <h3 style="color: #86c232">Поделись своими впечатлениями о фильме!</h3>
+            <p>Не забудь представится :)</p>
+             <div class="review">
+                 <form action="" method="post"><!--Создаем форму-->
+                    <input type="text" placeholder="Имя" name="fname"><!--Создаем строку для ввода имени-->
+                     <br>
+                    <textarea placeholder="Сообщение" name="message" rows="10" cols="45"></textarea><!--Поле для ввода сообщения-->
+                    <input type="submit" value="Отправить" /><!--Кнопка отправить-->
+                 </form>
+    </div>
+</div>
+{% endblock %}

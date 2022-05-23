@@ -1,7 +1,12 @@
 {% extends "base_generic.html" %}
 
-{% block content %}
-<p class="features">Logged uvhout!</p>
+{% block title %}
+Выход
+{% endblock %}
 
-<a href="{% url 'login'%}" class="features">Click here to login again.</a>
+{% block content %}
+<div class="outlog">
+    <h2 class="features">Logged out!</h2>
+    <a href="{% url 'login'%}" class="features" >Click here to login again.</a>
+</div>
 {% endblock %}

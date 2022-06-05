@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from django.db import models
+from . import models
 
 # Create your views here.
+
 def index(request):
     return render(request, 'comments/main.html')
 
@@ -14,7 +17,9 @@ def outlog(request):
     return render(request, 'registration/outlog.html')
 
 def leon_full(request):
-    return render(request, 'comments/leon_full.html')
+    all_kino = models.Kino.objects.all()
+    context = {'all_kino': all_kino}
+    return render(request, 'comments/leon_full.html', context=context)
 
 def koko_full(request):
     return render(request, 'comments/koko_full.html')

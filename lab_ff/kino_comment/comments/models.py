@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class Kino(models.Model):
     kino_name = models.CharField(max_length=30)

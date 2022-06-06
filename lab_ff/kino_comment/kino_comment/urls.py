@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
-    path('', include('comments.urls'))  #обращаемся к папке комментс и вызываем юрлс
+    path('', include('comments.urls'))  # обращаемся к папке комментс и вызываем юрлс
 ]

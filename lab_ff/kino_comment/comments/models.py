@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class Kino(models.Model):
     kino_name = models.CharField(max_length=30)
@@ -10,7 +9,7 @@ class Kino(models.Model):
     director = models.CharField(max_length=30)
 
     def __str__(self):
-        return f"{self.kino_name}  {self.description} {self.genre} {self.country} {self.director}"
+        return f"{self.kino_name}"
 
 
 class Price(models.Model):
@@ -22,3 +21,9 @@ class Price(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Comment(models.Model):
+    kino = models.ForeignKey(Kino, on_delete=models.CASCADE)
+    author = models.CharField('автор', max_length=100)
+    text = models.TextField('текст комментария')

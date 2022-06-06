@@ -1,0 +1,21 @@
+{% extends 'base_generic.html' %}
+
+
+{% block title %}
+Результат поиска
+{% endblock %}
+
+{% block content %}
+<div class="search">
+
+  <h1>Результат поиска</h1>
+
+  <ul>
+    {% for price in object_list %}
+      <li>
+        {{ price.name }}, {{ price.money }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

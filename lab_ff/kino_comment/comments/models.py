@@ -11,3 +11,14 @@ class Kino(models.Model):
 
     def __str__(self):
         return f"{self.kino_name}  {self.description} {self.genre} {self.country} {self.director}"
+
+
+class Price(models.Model):
+    name = models.CharField(max_length=255)
+    money = models.CharField(max_length=255)
+
+    class Meta:
+        verbose_name_plural = "prices"
+
+    def __str__(self):
+        return self.name

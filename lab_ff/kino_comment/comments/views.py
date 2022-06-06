@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.db import models
 from . import models
-
+from django.views.generic import ListView
+from .models import Price
+from django.db.models import Q
 # Create your views here.
 
 def index(request):
@@ -35,3 +37,19 @@ def dolmatines_full(request):
 
 def wishes_full(request):
     return render(request, 'comments/wishes_full.html')
+
+class SearchResultsView(ListView):
+    model = Price
+    template_name = 'comments/search_results.html'
+
+
+class SearchResultsView(ListView):
+    model = Price
+    template_name = 'comments/search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Price.objects.filter(
+            Q(name__icontains=query) | Q(money__icontains=query)
+        )
+        return object_list

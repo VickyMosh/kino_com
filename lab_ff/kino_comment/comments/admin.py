@@ -1,9 +1,8 @@
 from django.contrib import admin
-from . import models
-from .models import Price
+from .models import Price, Kino
 
-# Register your models here.
 
+@admin.register(Kino)
 class KinoAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Name information', {'fields': ['kino_name']}),
@@ -13,10 +12,7 @@ class KinoAdmin(admin.ModelAdmin):
         ('Director information', {'fields': ['director']}),
     ]
 
-admin.site.register(models.Kino, KinoAdmin)
 
-
+@admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     list_display = ("name", "money",)
-
-admin.site.register(Price, PriceAdmin)

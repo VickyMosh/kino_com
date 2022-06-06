@@ -20,15 +20,10 @@
         <span class="logo"> Review avenue</span>
     </div>
     <ul>
-        <a href="{% url 'home' %}">
-            <li>Home</li>
-        </a>
-        <a href="{% url 'movie' %}">
-            <li>Movies</li>
-        </a>
-        <a href="{% url 'cartoon' %}">
-            <li>Cartoons</li>
-        </a>
+        <a href="{% url 'home' %}"><li>Home</li></a>
+        <a href="{% url 'movie_list' %}"><li>Movies</li></a>
+        <!-- <a href="{% url 'movie' %}"><li>Movies</li></a> -->
+        <!-- <a href="{% url 'cartoon' %}"><li>Cartoons</li></a> -->
         {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">
             <li>Log out</li>

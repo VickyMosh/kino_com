@@ -15,5 +15,9 @@ urlpatterns = [
     path('pirates_full', views.pirates_full, name='pirates_full'),
     path('dolmatines_full', views.dolmatines_full, name='dolmatines_full'),
     path('wishes_full', views.wishes_full, name='wishes_full'),
-    path('search/', SearchResultsView.as_view(), name='search_results')
+    path('search/', SearchResultsView.as_view(), name='search_results'),
+
+    path('film/<int:pk>/', views.MovieDetailView.as_view(), name='movie_detail'),
+    path('list/', views.MovieListView.as_view(), name='movie_list'),
+    path('<int:film_id>/add_comment/', views.add_comment, name='add_comment'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

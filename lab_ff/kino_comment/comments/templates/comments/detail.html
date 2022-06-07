@@ -1,0 +1,58 @@
+{% extends 'base_generic.html' %}
+
+
+{% block title %} Фильмы {% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Ты на странице {{ kino.kino_name }}</h1>
+    <p>Информация</p>
+    <div class="things_full">
+        <div class="first">
+            <h3 style="color: #86c232">Описание:</h3>
+            <p>{{ kino.description }}</p>
+        </div>
+        <br>
+        <div class="second">
+            <h3 style="color: #86c232">Год производства и страна:</h3>
+            <p>{{ kino.country }}</p>
+        </div>
+        <br>
+        <div class="third">
+            <h3 style="color: #86c232">Жанр</h3>
+            <p>{{ kino.genre }}</p>
+        </div>
+        <br>
+        <div class="fourth">
+            <h3 style="color: #86c232">Режиссер</h3>
+            <p>{{ kino.director }}</p>
+        </div>
+        <br>
+        {% if user.is_authenticated %}
+            <div class="fifth">
+                <h3 style="color: #86c232">Поделись своими впечатлениями о фильме!</h3>
+                <p>Не забудь представится :)</p>
+                <div class="review">
+                    <form action="{% url 'add_comment' kino.id %}" method="post"> <!--Создаем форму-->
+                        {% csrf_token %}
+                        <input type="text" placeholder="Имя" name="fname"> <!--Создаем строку для ввода имени-->
+                        <br>
+                        <textarea placeholder="Сообщение" name="message" rows="10" cols="45"></textarea> <!--Поле для ввода сообщения-->
+                        <br>
+                        <input type="submit" value="Отправить"> <!--Кнопка отправить-->
+                    </form>
+                </div>
+            </div>
+            <br>
+        {% endif %}
+        <div>
+            {% for review in kino.comment_set.all %}
+                <div>
+                    <b>{{ review.author }}:</b> <br>
+                    <p>{{ review.text }}</p>
+                </div><br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

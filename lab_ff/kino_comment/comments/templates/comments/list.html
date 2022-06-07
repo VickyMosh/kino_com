@@ -1,0 +1,23 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+Фильмы
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    {% for film in kino_list %}
+        <div class="things">
+            <div>
+                <a href="{% url 'movie_detail' film.id %}">
+                    <img src="static/comments/img/pirates.webp" width="134" height="226">
+                </a>
+                <a href="{% url 'movie_detail' film.id %}">
+                    <p style="color:  #86c232">{{ film.kino_name }}</p>
+                </a>
+                <p>{{ film.country }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

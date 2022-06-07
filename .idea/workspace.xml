@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2715b489-6734-4e2b-9acf-c3a392a8f8cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/search_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kino_com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kino_com.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/static/comments/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/static/comments/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/templates/comments/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_ff/kino_comment/kino_comment/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_ff/kino_comment/kino_comment/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="2715b489-6734-4e2b-9acf-c3a392a8f8cd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,10 +29,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

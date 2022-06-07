@@ -1,13 +1,13 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.shortcuts import render
 from django.views import generic
 from django.db import models
 from django.views.generic import ListView
 from django.db.models import Q
-
-from .models import Kino, Price, Comment
+from .models import Kino, Add, Price, Comment
+from django.contrib import messages
 
 
 class MovieListView(generic.ListView):
@@ -42,44 +42,43 @@ def add_comment(request, film_id):
 def index(request):
     return render(request, 'comments/main.html')
 
-
 def movie(request):
     return render(request, 'comments/movie.html')
-
 
 def cartoon(request):
     return render(request, 'comments/cartoon.html')
 
-
 def outlog(request):
     return render(request, 'registration/outlog.html')
 
+def add(request):
+   all_add = Add.objects.all()
+   context = {'all_add': all_add}
+   if request.POST:
+       name = request.POST['name']
+       kino = request.POST['kino']
+       Add.objects.create(name=name, kino=kino)
+       return render(request, 'comments/add.html', context=context)
+   else:
+       return render(request, 'comments/add.html', context=context)
 
-def leon_full(request):
-    all_kino = models.Kino.objects.all()
-    context = {'all_kino': all_kino}
-    return render(request, 'comments/leon_full.html', context=context)
+def delete(request):
+    all_add = Add.objects.all()
+    context = {'all_add': all_add}
+    if request.POST:
+        name = request.POST['name']
+        try:
+            Add.objects.get(name=name).delete()
+            return render(request, 'comments/delete.html', context=context)
+        except:
+            messages.info(request, 'Name not found!')
+            return render(request, 'comments/delete.html', context=context)
+    else:
+        return render(request, 'comments/delete.html', context=context)
 
 
-def koko_full(request):
-    return render(request, 'comments/koko_full.html')
-
-
-def soul_full(request):
-    return render(request, 'comments/soul_full.html')
-
-
-def pirates_full(request):
-    return render(request, 'comments/pirates_full.html')
-
-
-def dolmatines_full(request):
-    return render(request, 'comments/dolmatines_full.html')
-
-
-def wishes_full(request):
-    return render(request, 'comments/wishes_full.html')
-
+def edit(request):
+    return render(request, 'comments/edit.html')
 
 class SearchResultsView(ListView):
     model = Price

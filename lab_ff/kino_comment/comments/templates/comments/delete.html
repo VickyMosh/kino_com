@@ -1,0 +1,37 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+Delete
+{% endblock %}
+
+{% block content %}
+<div>
+    <br>
+    <h2>Delete a movies to the database:</h2>
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">PK number:</label>
+            <input class="form-control" type="text" id="name" name="name">
+        </div>
+        <br>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <div>{{ message }}</div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+    <br>
+    <ul>
+        {% for add in all_add%}
+        <div>{{ add }}</div>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+

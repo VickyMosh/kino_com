@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Price, Kino
+from .models import Price, Kino, Comment, Add
 
 
 @admin.register(Kino)
@@ -12,7 +12,14 @@ class KinoAdmin(admin.ModelAdmin):
         ('Director information', {'fields': ['director']}),
     ]
 
-
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     list_display = ("name", "money",)
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ("kino", "author", "text",)
+
+@admin.register(Add)
+class AddAdmin(admin.ModelAdmin):
+    list_display = ("name", "kino",)

@@ -27,3 +27,12 @@ class Comment(models.Model):
     kino = models.ForeignKey(Kino, on_delete=models.CASCADE)
     author = models.CharField('автор', max_length=100)
     text = models.TextField('текст комментария')
+
+
+class Add(models.Model):
+    name = models.CharField(max_length=30)
+    kino = models.TextField()
+
+    def __str__(self):
+        return f"{self.name} предложил посмотреть {self.kino}"
+

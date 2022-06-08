@@ -9,12 +9,13 @@
 <div class="search">
 
   <h1>Результат поиска</h1>
+  <br>
 
   <ul>
     {% for price in object_list %}
-      <li>
+      <div>
         {{ price.name }}, {{ price.money }}
-      </li>
+      </div>
     {% endfor %}
   </ul>
 </div>

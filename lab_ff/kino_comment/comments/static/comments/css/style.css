@@ -3,7 +3,7 @@ body {
 }
 
 aside{
-    height: 145vh;
+    height: 240vh;
     float: left;
     background: #222629;
     width: 20%;
@@ -45,7 +45,13 @@ aside ul li:hover, aside ul a:hover{
     transform: scale(1.1);
 }
 
-main .outlog a:hover{
+main .outlog, .features a:hover{
+    color: rgb(134, 194, 50);
+    transform: scale(1.1);
+    transition: all .6s;
+}
+
+main .list_i :hover{
     color: rgb(134, 194, 50);
     transform: scale(1.1);
     transition: all .6s;
@@ -70,16 +76,20 @@ main .features p{
     max-width: 400px;
 }
 
+main .features a{
+    text-decoration: none;
+}
+
 main .features h4{
     color: rgb(134, 194, 50);
 }
 
 main .things{
     display: grid;
-    grid-template-rows: 250px 250px 250px;
     padding: 20px;
     text-align: justify;
 }
+
 
 main .things_full{
     display: grid;
@@ -88,6 +98,11 @@ main .things_full{
 }
 
 main .things_full p { display: inline; }
+
+main .list {
+display: block;
+float: left;
+}
 
 main .container {
     color: #ffffff;
@@ -99,7 +114,6 @@ main .container {
 main .signup, .search{
     padding: 100px;
 }
-
 
 main .signup h3{
     padding: 0px 0px 30px 0px;

@@ -9,7 +9,7 @@ Add
     <br>
     <h2>Add a new movies to the database:</h2>
     <br>
-    <form action="" method="POST">
+    <form action="" method="POST"> <!--форма ввода-->
         {% csrf_token %}
         <div>
             <label for="name">Name</label>
@@ -24,7 +24,7 @@ Add
         <input  type="submit" value="Отправить">
     </form>
     <br>
-    <ul>
+    <ul> <!--вывод списка из таблицы Add-->
         {% for add in all_add%}
             <div>{{ add }}</div>
         {% endfor %}

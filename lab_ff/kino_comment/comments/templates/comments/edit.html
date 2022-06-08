@@ -5,6 +5,30 @@ Edit
 {% endblock %}
 
 {% block content %}
-
+<div>
+    <br>
+    <h2>Edit movies from the database:</h2>
+    <br>
+    <form action="" method="POST"> <!--форма редактирования-->
+        {% csrf_token %}
+        <div>
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="kino">Movies</label>
+            <input class="form-control" type="text" id="kino" name="kino">
+        </div>
+        <br>
+        <input  type="submit" value="Отправить">
+    </form>
+    <br>
+    <ul> <!--вывод списка из таблицы Add-->
+        {% for add in all_add%}
+            <div>{{ add }}</div>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
 

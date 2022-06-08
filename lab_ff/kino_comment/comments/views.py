@@ -1,9 +1,8 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.shortcuts import render
 from django.views import generic
-from django.db import models
 from django.views.generic import ListView
 from django.db.models import Q
 from .models import Kino, Add, Price, Comment
@@ -45,9 +44,6 @@ def index(request):
 def movie(request):
     return render(request, 'comments/movie.html')
 
-def cartoon(request):
-    return render(request, 'comments/cartoon.html')
-
 def outlog(request):
     return render(request, 'registration/outlog.html')
 
@@ -78,7 +74,21 @@ def delete(request):
 
 
 def edit(request):
-    return render(request, 'comments/edit.html')
+    all_add = Add.objects.all()
+    context = {'all_add': all_add}
+    if request.POST:
+        name = request.POST['name']
+        kino = request.POST['kino']
+        try:
+            object_add = Add.objects.get(name=name)
+            object_add.kino = kino
+            object_add.save()
+            return render(request, 'comments/edit.html', context=context)
+        except:
+            messages.info(request, 'Name not found!')
+            return render(request, 'comments/edit.html', context=context)
+    else:
+        return render(request, 'comments/edit.html', context=context)
 
 class SearchResultsView(ListView):
     model = Price

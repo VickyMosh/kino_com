@@ -46,7 +46,7 @@
             <br>
         {% endif %}
         <div>
-            {% for review in kino.comment_set.all %}
+            {% for review in kino.comment_set.all %} <!--вывод списка из таблицы Comment-->
                 <div>
                     <b>{{ review.author }}:</b> <br>
                     <p>{{ review.text }}</p>

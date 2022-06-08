@@ -12,6 +12,7 @@ class KinoAdmin(admin.ModelAdmin):
         ('Director information', {'fields': ['director']}),
     ]
 
+
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     list_display = ("name", "money",)

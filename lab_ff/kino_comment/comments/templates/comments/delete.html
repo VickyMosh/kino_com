@@ -9,10 +9,10 @@ Delete
     <br>
     <h2>Delete a movies to the database:</h2>
     <br>
-    <form action="" method="POST">
+    <form action="" method="POST"> <!--форма удалени-->
         {% csrf_token %}
         <div class="form-group">
-            <label for="name">PK number:</label>
+            <label for="name">Name:</label>
             <input class="form-control" type="text" id="name" name="name">
         </div>
         <br>
@@ -27,7 +27,7 @@ Delete
         <input type="submit" value="Отправить">
     </form>
     <br>
-    <ul>
+    <ul> <!--вывод списка из таблицы Add-->
         {% for add in all_add%}
         <div>{{ add }}</div>
         {% endfor %}

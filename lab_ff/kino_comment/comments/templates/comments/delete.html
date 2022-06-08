@@ -7,31 +7,36 @@ Delete
 {% block content %}
 <div>
     <br>
-    <h2>Delete a movies to the database:</h2>
-    <br>
-    <form action="" method="POST"> <!--форма удалени-->
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input class="form-control" type="text" id="name" name="name">
-        </div>
+    {% if user.is_authenticated %}
+        <h2>Delete a movies to the database:</h2>
         <br>
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <div>{{ message }}</div>
+        <form action="" method="POST"> <!--форма удалени-->
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input class="form-control" type="text" id="name" name="name">
+            </div>
+            <br>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <div>{{ message }}</div>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <br>
+            <input type="submit" value="Отправить">
+        </form>
+        <br>
+        <ul> <!--вывод списка из таблицы Add-->
+            {% for add in all_add%}
+            <div>{{ add }}</div>
             {% endfor %}
         </ul>
-        {% endif %}
-        <br>
-        <input type="submit" value="Отправить">
-    </form>
-    <br>
-    <ul> <!--вывод списка из таблицы Add-->
-        {% for add in all_add%}
-        <div>{{ add }}</div>
-        {% endfor %}
-    </ul>
+    {% else %}
+        <h2>Function delete is not available to you until you are login.</h2>
+        <a href="{% url 'login'%}" class="features" >Click here to login.</a>
+    {% endif %}
 </div>
 {% endblock %}
 

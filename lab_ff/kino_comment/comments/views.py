@@ -99,4 +99,5 @@ class SearchResultsView(ListView):
         object_list = Price.objects.filter(
             Q(name__icontains=query) | Q(money__icontains=query)
         )
-        return object_list
+        if filter_by == "None":
+            return object_list

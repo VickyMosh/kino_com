@@ -15,6 +15,12 @@
     <br>
     <form action="{% url 'search_results' %}" method="get">
         <input name="q" type="text" placeholder="Search...">
+        <p>Фмльтр</p>
+        <select>
+            <option>Нет</option>
+            <option>A&rarr;Я</option>
+            <option>Я&rarr;А</option>
+        </select>
     </form>
 </div>
 {% endblock %}

@@ -7,28 +7,33 @@ Edit
 {% block content %}
 <div>
     <br>
-    <h2>Edit movies from the database:</h2>
-    <br>
-    <form action="" method="POST"> <!--форма редактирования-->
-        {% csrf_token %}
-        <div>
-            <label for="name">Name</label>
-            <input class="form-control" type="text" id="name" name="name">
-        </div>
+     {% if user.is_authenticated %}
+        <h2>Edit movies from the database:</h2>
         <br>
-        <div class="form-group">
-            <label for="kino">Movies</label>
-            <input class="form-control" type="text" id="kino" name="kino">
-        </div>
+        <form action="" method="POST"> <!--форма редактирования-->
+            {% csrf_token %}
+            <div>
+                <label for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="kino">Movies</label>
+                <input class="form-control" type="text" id="kino" name="kino">
+            </div>
+            <br>
+            <input  type="submit" value="Отправить">
+        </form>
         <br>
-        <input  type="submit" value="Отправить">
-    </form>
-    <br>
-    <ul> <!--вывод списка из таблицы Add-->
-        {% for add in all_add%}
-            <div>{{ add }}</div>
-        {% endfor %}
-    </ul>
+        <ul> <!--вывод списка из таблицы Add-->
+            {% for add in all_add%}
+                <div>{{ add }}</div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Function delete is not available to you until you are login.</h2>
+        <a href="{% url 'login'%}" class="features" >Click here to login.</a>
+    {% endif %}
 </div>
 {% endblock %}
 

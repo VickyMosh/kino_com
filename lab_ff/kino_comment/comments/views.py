@@ -41,22 +41,26 @@ def add_comment(request, film_id):
 def index(request):
     return render(request, 'comments/main.html')
 
+
 def movie(request):
     return render(request, 'comments/movie.html')
+
 
 def outlog(request):
     return render(request, 'registration/outlog.html')
 
+
 def add(request):
-   all_add = Add.objects.all()
-   context = {'all_add': all_add}
-   if request.POST:
-       name = request.POST['name']
-       kino = request.POST['kino']
-       Add.objects.create(name=name, kino=kino)
-       return render(request, 'comments/add.html', context=context)
-   else:
-       return render(request, 'comments/add.html', context=context)
+    all_add = Add.objects.all()
+    context = {'all_add': all_add}
+    if request.POST:
+        name = request.POST['name']
+        kino = request.POST['kino']
+        Add.objects.create(name=name, kino=kino)
+        return render(request, 'comments/add.html', context=context)
+    else:
+        return render(request, 'comments/add.html', context=context)
+
 
 def delete(request):
     all_add = Add.objects.all()
@@ -90,6 +94,7 @@ def edit(request):
     else:
         return render(request, 'comments/edit.html', context=context)
 
+
 class SearchResultsView(ListView):
     model = Price
     template_name = 'comments/search_results.html'
@@ -99,7 +104,5 @@ class SearchResultsView(ListView):
         object_list = Price.objects.filter(
             Q(name__icontains=query) | Q(money__icontains=query)
         )
-        def __str__(self):
-            return self.name
-
         return object_list
+

@@ -8,31 +8,31 @@ Add
 <div>
     <br>
     {% if user.is_authenticated %}
-        <h2>Add a new movies to the database:</h2>
+    <h2>Add a new movies to the database:</h2>
+    <br>
+    <form action="" method="POST"> <!--форма ввода-->
+        {% csrf_token %}
+        <div>
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name">
+        </div>
         <br>
-        <form action="" method="POST"> <!--форма ввода-->
-            {% csrf_token %}
-            <div>
-                <label for="name">Name</label>
-                <input class="form-control" type="text" id="name" name="name">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="kino">Movies</label>
-                <input class="form-control" type="text" id="kino" name="kino">
-            </div>
-            <br>
-            <input  type="submit" value="Отправить">
-        </form>
+        <div class="form-group">
+            <label for="kino">Movies</label>
+            <input class="form-control" type="text" id="kino" name="kino">
+        </div>
         <br>
-        <ul> <!--вывод списка из таблицы Add-->
-            {% for add in all_add%}
-                <div>{{ add }}</div>
-            {% endfor %}
-        </ul>
+        <input type="submit" value="Отправить">
+    </form>
+    <br>
+    <ul> <!--вывод списка из таблицы Add-->
+        {% for add in all_add%}
+        <div>{{ add }}</div>
+        {% endfor %}
+    </ul>
     {% else %}
-        <h2>Function add is not available to you until you are login.</h2>
-        <a href="{% url 'login'%}" class="features" >Click here to login.</a>
+    <h2>Function add is not available to you until you are login.</h2>
+    <a href="{% url 'login'%}" class="features">Click here to login.</a>
     {% endif %}
 </div>
 {% endblock %}

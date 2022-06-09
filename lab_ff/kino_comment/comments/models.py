@@ -35,4 +35,3 @@ class Add(models.Model):
 
     def __str__(self):
         return f"{self.name} предложил посмотреть {self.kino}"
-

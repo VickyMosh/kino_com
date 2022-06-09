@@ -20,16 +20,32 @@
         <span class="logo"> Review avenue</span>
     </div>
     <ul>
-        <a href="{% url 'home' %}"><li>Home</li></a>
-        <a href="{% url 'movie_list' %}"><li>Movies</li></a>
+        <a href="{% url 'home' %}">
+            <li>Home</li>
+        </a>
+        <a href="{% url 'movie_list' %}">
+            <li>Movies</li>
+        </a>
         {% if user.is_authenticated %}
-        <a href="{% url 'add' %}"><li>Add</li></a>
-        <a href="{% url 'delete' %}"><li>Delete</li></a>
-        <a href="{% url 'edit' %}"><li>Edit</li></a>
-        <a href="{% url 'logout' %}"><li>Log out</li></a>
+        <a href="{% url 'add' %}">
+            <li>Add</li>
+        </a>
+        <a href="{% url 'delete' %}">
+            <li>Delete</li>
+        </a>
+        <a href="{% url 'edit' %}">
+            <li>Edit</li>
+        </a>
+        <a href="{% url 'logout' %}">
+            <li>Log out</li>
+        </a>
         {% else %}
-        <a href="{% url 'login' %}"><li>Log in</li></a>
-        <a href="{% url 'signup' %}"><li>Registration</li></a>
+        <a href="{% url 'login' %}">
+            <li>Log in</li>
+        </a>
+        <a href="{% url 'signup' %}">
+            <li>Registration</li>
+        </a>
         {% endif %}
     </ul>
 </aside>

@@ -17,9 +17,11 @@ class KinoAdmin(admin.ModelAdmin):
 class PriceAdmin(admin.ModelAdmin):
     list_display = ("name", "money",)
 
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ("kino", "author", "text",)
+
 
 @admin.register(Add)
 class AddAdmin(admin.ModelAdmin):

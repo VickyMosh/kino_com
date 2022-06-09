@@ -29,28 +29,30 @@
         </div>
         <br>
         {% if user.is_authenticated %}
-            <div class="fifth">
-                <h3 style="color: #86c232">Поделись своими впечатлениями о фильме!</h3>
-                <p>Не забудь представится :)</p>
-                <div class="review">
-                    <form action="{% url 'add_comment' kino.id %}" method="post"> <!--Создаем форму-->
-                        {% csrf_token %}
-                        <input type="text" placeholder="Имя" name="fname"> <!--Создаем строку для ввода имени-->
-                        <br>
-                        <textarea placeholder="Сообщение" name="message" rows="10" cols="45"></textarea> <!--Поле для ввода сообщения-->
-                        <br>
-                        <input type="submit" value="Отправить"> <!--Кнопка отправить-->
-                    </form>
-                </div>
+        <div class="fifth">
+            <h3 style="color: #86c232">Поделись своими впечатлениями о фильме!</h3>
+            <p>Не забудь представится :)</p>
+            <div class="review">
+                <form action="{% url 'add_comment' kino.id %}" method="post"> <!--Создаем форму-->
+                    {% csrf_token %}
+                    <input type="text" placeholder="Имя" name="fname"> <!--Создаем строку для ввода имени-->
+                    <br>
+                    <textarea placeholder="Сообщение" name="message" rows="10" cols="45"></textarea>
+                    <!--Поле для ввода сообщения-->
+                    <br>
+                    <input type="submit" value="Отправить"> <!--Кнопка отправить-->
+                </form>
             </div>
-            <br>
+        </div>
+        <br>
         {% endif %}
         <div>
             {% for review in kino.comment_set.all %} <!--вывод списка из таблицы Comment-->
-                <div>
-                    <b>{{ review.author }}:</b> <br>
-                    <p>{{ review.text }}</p>
-                </div><br>
+            <div>
+                <b>{{ review.author }}:</b> <br>
+                <p>{{ review.text }}</p>
+            </div>
+            <br>
             {% endfor %}
         </div>
     </div>

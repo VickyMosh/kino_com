@@ -9,18 +9,19 @@
     <h1>Ты на странице с фильмами</h1>
     <div class="list">
         {% for film in kino_list %}
-            <div class="things">
-                <div>
-    <!--                <a href="{% url 'movie_detail' film.id %}">-->
-    <!--                    <img src="/static/comments/img/koko.jpg" width="134" height="226">-->
-    <!--                </a>-->
-                    <a class="list_i" href="{% url 'movie_detail' film.id %}">
-                        <p style="color:  #86c232">{{ film.kino_name }}</p>
-                    </a>
-                    <p>{{ film.country }}</p>
-                    <img src="/static/comments/img/{{ film.kino_name }}.webp" width="220" height="323" alt="К сожалению, картинка отсутсвует. Но мы обязательно ее добавим!">
-                </div>
+        <div class="things">
+            <div>
+                <!--                <a href="{% url 'movie_detail' film.id %}">-->
+                <!--                    <img src="/static/comments/img/koko.jpg" width="134" height="226">-->
+                <!--                </a>-->
+                <a class="list_i" href="{% url 'movie_detail' film.id %}">
+                    <p style="color:  #86c232">{{ film.kino_name }}</p>
+                </a>
+                <p>{{ film.country }}</p>
+                <img src="/static/comments/img/{{ film.kino_name }}.webp" width="220" height="323"
+                     alt="К сожалению, картинка отсутсвует. Но мы обязательно ее добавим!">
             </div>
+        </div>
         {% endfor %}
     </div>
 </div>

@@ -7,25 +7,25 @@
 
 {% block content %}
 <div class="search">
-  <h1>Результат поиска</h1>
-  <br>
-  <table border="2" cellpadding="10" cellspacing="10">
-      <td>Мультфильмы</td>
-      <td>Сборы</td>
-      {% for price in object_list %}
-          <tr>
-              <td>{{price.name}}</td>
-              <td>{{price.money}}</td>
-          </tr>
-      {% endfor %}
-  </table>
+    <h1>Результат поиска</h1>
+    <br>
+    <table border="2" cellpadding="10" cellspacing="10">
+        <td class="bord_td">Мультфильмы</td>
+        <td>Сборы</td>
+        {% for price in object_list %}
+        <tr>
+            <td class="bord_td">{{price.name}}</td>
+            <td class="bord_td"> {{price.money}}</td>
+        </tr>
+        {% endfor %}
+    </table>
     <!-- ниже кнопка фильтра -->
-<!--  <ul>-->
-<!--    {% for price in object_list %}-->
-<!--      <div>-->
-<!--        {{ price.name }}, {{ price.money }}-->
-<!--      </div>-->
-<!--    {% endfor %}-->
-<!--  </ul>-->
+    <!--  <ul>-->
+    <!--    {% for price in object_list %}-->
+    <!--      <div>-->
+    <!--        {{ price.name }}, {{ price.money }}-->
+    <!--      </div>-->
+    <!--    {% endfor %}-->
+    <!--  </ul>-->
 </div>
 {% endblock %}

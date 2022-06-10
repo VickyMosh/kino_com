@@ -94,15 +94,18 @@ def edit(request):
     else:
         return render(request, 'comments/edit.html', context=context)
 
-
 class SearchResultsView(ListView):
     model = Price
     template_name = 'comments/search_results.html'
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Price.objects.filter(
-            Q(name__icontains=query) | Q(money__icontains=query)
-        )
-        return object_list
+        filtr = self.request.GET.get('sort')
+        if filtr == "name":
+            filtr_list = Price.objects.all().order_by(filtr)
+            object_list = filtr_list.filter(Q(name__icontains=query) | Q(money__icontains=query))
+            return object_list
+        else:
+            object_list = Price.objects.all().filter(Q(name__icontains=query) | Q(money__icontains=query))
+            return object_list
 

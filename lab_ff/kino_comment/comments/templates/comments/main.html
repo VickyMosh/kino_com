@@ -15,13 +15,12 @@
         больших сборов. <br></h8>
     <br>
     <form action="{% url 'search_results' %}" method="get">
+        {% csrf_token %}
         <input name="q" type="text" placeholder="Search...">
-        <!--        <p>Фильтр</p>-->
-        <!--        <select>-->
-        <!--            <option>Нет</option>-->
-        <!--            <option>A&rarr;Я</option>-->
-        <!--            <option>Я&rarr;А</option>-->
-        <!--        </select>-->
+        <ul aria-labelledby="dropdownMenu2">
+            <button type="submit" name="sort" value="none">None</button>
+            <button type="submit" name="sort" value="name">A&rarr;Я</button>
+        </ul>
     </form>
 </div>
 {% endblock %}

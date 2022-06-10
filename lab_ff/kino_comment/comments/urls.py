@@ -2,13 +2,12 @@ from django.urls import path, re_path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import SearchResultsView
 
 urlpatterns = [
                   path('', views.index, name='home'),  # при переходе на гл стр обращаемся к методу индекс в вью
                   path('movies', views.movie, name='movie'),
                   path('outlog', views.outlog, name='outlog'),
-                  path('search/', SearchResultsView.as_view(), name='search_results'),
+                  path('search/', views.SearchResultsView.as_view(), name='search_results'),
 
                   path('add', views.add, name='add'),
                   path('delete', views.delete, name='delete'),
